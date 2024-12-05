@@ -7,16 +7,16 @@ data = get_data(5)
 raw_rules, raw_updates = parse(data, sections=paragraphs)
 rules = parse(raw_rules, ints)
 updates = parse(raw_updates, ints)
-in5 = [rules, updates]
+in5 = {'rules': rules, 'updates': updates}
 
-def day5_1(input: list[list[list[int]]]):
-    rules, updates = input
+def day5_1(input: dict[str, list[list[int]]]):
+    rules, updates = input['rules'], input['updates']
     res, _ = update_sums(rules, updates)
     
     return res
 
-def day5_2(input: list[list[list[int]]]):
-    rules, updates = input
+def day5_2(input: dict[str, list[list[int]]]):
+    rules, updates = input['rules'], input['updates']
     _, res = update_sums(rules, updates)
     
     return res
