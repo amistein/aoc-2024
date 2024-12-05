@@ -1,6 +1,7 @@
-from .data import get_data
+from .data import get_data, parse
 
-in4 = get_data(4)
+data = get_data(4)
+in4 = parse(data)
 
 day_4_1_word = 'XMAS'
 day_4_2_word = 'MAS'

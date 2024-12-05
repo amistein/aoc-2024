@@ -1,7 +1,8 @@
-from .data import get_data
-from .utils import ints
+from .data import get_data, parse
+from .parsers import ints
 
-in2 = get_data(2, ints)
+data = get_data(2)
+in2 = parse(data, ints)
 
 def day2_1(records: list[list[int]]):
     return len([record for record in records if is_safe(record)])

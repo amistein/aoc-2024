@@ -5,6 +5,7 @@ sol1 = [2756096, 23117829]
 sol2 = [572, 612]
 sol3 = [196826776, 106780429]
 sol4 = [2554, 1916]
+sol4 = [4462, 6767]
 
 # Source: https://github.com/norvig/pytudes/blob/main/ipynb/Advent-2020.ipynb
 def do(day: str, *answers: object) -> list[int | None]:

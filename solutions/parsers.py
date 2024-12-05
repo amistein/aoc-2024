@@ -1,3 +1,5 @@
+import re
+
 from typing import Callable, TypeVar
 T = TypeVar('T')
 
@@ -11,5 +13,6 @@ def int_pair(s: str):
     l = [int(e) for e in s.split()]
     return (l[0], l[1])
 
-def ints(s: str):
-    return list(map(int, s.split()))
+def ints(text: str) -> list[int]:
+    """A tuple of all the integers in text, ignoring non-number characters."""
+    return list(map(int, re.findall(r'-?[0-9]+', text)))

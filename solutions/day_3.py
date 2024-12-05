@@ -7,14 +7,12 @@ in3 = get_data(3)
 day3_operation_regex = r'mul\([0-9]{1,3},[0-9]{1,3}\)'
 day3_operand_regex = r'mul\(([0-9]{1,3}),([0-9]{1,3})\)'
 
-def day3_1(input: list[str]):
-    memory = ''.join(input)
+def day3_1(memory: str):
     operands = re.findall(day3_operand_regex, memory)
     
     return sum([int(a) * int(b) for a, b in operands])
 
-def day3_2(input: list[str]):
-    memory = ''.join(input)
+def day3_2(memory: str):
     activated = True
     all_operands: list[tuple[str, str]] = []
     i = 0

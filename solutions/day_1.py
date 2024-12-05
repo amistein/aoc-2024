@@ -1,9 +1,10 @@
 from collections import Counter
 
-from .data import get_data
-from .utils import int_pair
+from .data import get_data, parse
+from .parsers import int_pair
 
-in1 = get_data(1, int_pair)
+data = get_data(1)
+in1 = parse(data, int_pair)
 
 def day1_1(pairs: list[tuple[int, int]]):
     sorted_list1 = sorted(get_list1(pairs))
